@@ -1,4 +1,4 @@
-#!/data/data/com.termux/files/usr/bin/bash
+#!/bin/bash
 
 PACKAGE="$1"
 
@@ -7,7 +7,7 @@ mkdir -p ${PACKAGE}/data/data/com.termux/files/usr/share
 mkdir -p ${PACKAGE}/data/data/com.termux/files/usr/lib/python3.11
 mkdir -p ${PACKAGE}/DEBIAN
 
-pip install ${PACKAGE} --target=${PACKAGE}/data/data/com.termux/files/usr/lib/python3.11
+pip3 install ${PACKAGE} --target=${PACKAGE}/data/data/com.termux/files/usr/lib/python3.11
 
 cat <<EOF > ${PACKAGE}/DEBIAN/control
 Package: ${PACKAGE}
